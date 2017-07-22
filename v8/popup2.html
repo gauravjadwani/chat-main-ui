@@ -1,0 +1,34 @@
+<html>
+<head>
+
+<a href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+	<script type="text/javascript">
+		$.mobile.document.on( "click", "#open-popupArrow", function( evt ) {
+    $( "#popupArrow" ).popup( "open", { x: evt.pageX, y: evt.pageY } );
+    evt.preventDefault();
+});
+	</script>
+	<style type="text/css">
+		.clickable-area {
+    display: block;
+    width: 100%;
+    height: 300px;
+    background-color: #ffefef;
+}
+.clickable-area:focus {
+    outline: 0;
+}
+	</style>
+</head>
+<body>
+	<div data-role="popup" id="popupArrow" data-arrow="true">
+<p>A paragraph inside the popup with an arrow.</p>
+<p>This second paragraph serves to increase the height of the popup</p>
+</div>
+<a href="#" id="open-popupArrow" class="clickable-area"></a>
+</body>
+</html>
